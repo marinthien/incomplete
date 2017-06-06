@@ -1,0 +1,1081 @@
+/* 
+ Theme Name: Business Theme
+ Author: Hieu Thien Nguyen
+ Version: 1.0
+ Created on : Jul 26, 2015, 2:46:56 AM
+*/
+/*** Define the common function to style the object**/
+/**Below may not be used in this work*/
+@import url(http://fonts.googleapis.com/css?family=Arimo);
+@import url("http://fonts.googleapis.com/css?subset=latin%2Clatin-ext&family=Open%20Sans");
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Raleway);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+button {
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  border-radius: 0.1875em;
+  color: white;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.3em 0.35em 0.35em;
+  text-decoration: none; }
+  button:hover {
+    color: #fff;
+    cursor: pointer; }
+
+.Btn-Menu {
+  background: none;
+  position: absolute;
+  z-index: 1; }
+
+.center-align {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%); }
+
+div.Site-Nav {
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-shadow: 0 1px 5px 0 #000;
+  -webkit-box-shadow: 0 1px 5px 0 #000;
+  /*	*/
+  box-shadow: 0 1px 5px 0 #000;
+  font-size: 15pt;
+  line-height: 50px;
+  height: 50px;
+  background: linear-gradient(-45deg, #38aaab 0%, #4befed 50%, #37bebc 100%);
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear; }
+  div.Site-Nav ul {
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    margin: 0 0;
+    right: 0;
+    top: 0;
+    padding: 0;
+    height: 60px; }
+    div.Site-Nav ul li {
+      float: left;
+      position: relative;
+      line-height: 140px;
+      position: relative;
+      opacity: 1;
+      width: 20%;
+      transition: all 0.5s linear;
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear; }
+      div.Site-Nav ul li > ul {
+        position: absolute;
+        padding: 15px 15px;
+        top: 90px;
+        left: 0;
+        transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -moz-box-shadow: 1px 1px 5px 0 #888;
+        -webkit-box-shadow: 1px 1px 5px 0 #888;
+        /*	*/
+        box-shadow: 1px 1px 5px 0 #888;
+        display: none;
+        height: auto;
+        width: 200%;
+        background: #FF3B00;
+        background: linear-gradient(-145deg, #FF3B00 0%, #F5AD98 100%);
+        background: linear-gradient(-45deg, #2680FF 0%, #61A1FA 100%);
+        background: linear-gradient(-90deg, #20232a 0%, #20232a 100%) !important;
+        color: #fff;
+        box-sizing: border-box; }
+        div.Site-Nav ul li > ul li {
+          width: 40%;
+          margin: auto 5%;
+          text-align: center; }
+        div.Site-Nav ul li > ul a {
+          width: 100%;
+          line-height: 30px;
+          display: block;
+          transition: all 0.5s linear;
+          -webkit-transition: all 0.5s linear;
+          -moz-transition: all 0.5s linear;
+          box-sizing: border-box;
+          text-decoration: none;
+          font-weight: normal;
+          font-size: 8pt;
+          font-family: "Open Sans";
+          text-transform: uppercase;
+          text-align: left;
+          color: #fff; }
+          div.Site-Nav ul li > ul a:hover {
+            line-height: 30px;
+            padding: 0;
+            margin: 0; }
+      div.Site-Nav ul li:hover, div.Site-Nav ul li > a:hover, div.Site-Nav ul li a.current, div.Site-Nav ul li div#current-location.current {
+        text-decoration: underline;
+        text-decoration-color: #F16121; }
+      div.Site-Nav ul li > a {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 9pt;
+        font-family: "Open Sans";
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+        text-shadow: 0 1px 1px #888;
+        display: block;
+        cursor: pointer;
+        vertical-align: middle;
+        width: 100%;
+        box-sizing: border-box; }
+    div.Site-Nav ul li:first-child a {
+      border-left: none; }
+    div.Site-Nav ul li:hover > ul {
+      display: block;
+      z-index: 300;
+      animation: moveX .5s ease; }
+  div.Site-Nav div.company-name-combine {
+    margin-left: 5px;
+    text-shadow: 0 1px 1px #888;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    position: relative;
+    width: 10%;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 18pt;
+    color: #fff;
+    display: inline-block; }
+
+@keyframes BouncingX {
+  0% {
+    transform: matrix3d(0.1, 0, 0, 0, 0, 0.1, 0, 0, 0, 0, 1, 0, 0, 0, -1600, 0); }
+  25% {
+    transform: matrix3d(0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 30, 0, 1);
+    opacity: 1; }
+  75% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 10, 0, 1);
+    opacity: 1; }
+  85% {
+    transform: matrix3d(0.9, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 60, 0, 0, 1);
+    opacity: 1; }
+  100% {
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+@keyframes doorOpenIn {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  25% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 90, 0, 1);
+    opacity: 1; }
+  75% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -10, 0, 0, 1);
+    opacity: 1; }
+  90% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 4, 0, 1);
+    opacity: 1; }
+  100% {
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+@keyframes danceIn {
+  0%,23% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1520, -200, -1660, 1); }
+  25%,78% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -120, -100, -660, 1); }
+  75% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -10, -20, -660, 1); }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+@keyframes verticalBarOut {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1; }
+  to {
+    transform: translateY(-100%) scale(0.1);
+    opacity: 0; } }
+@-webkit-keyframes verticalBarOut {
+  from {
+    -webkit-transform: translateY(0) scale(1);
+    opacity: 1; }
+  to {
+    -webkit-transform: translateY(-100%) scale(0.1);
+    opacity: 0; } }
+@keyframes verticalBarIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+@-webkit-keyframes verticalBarIn {
+  from {
+    -webkit-transform: translateY(100%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateY(0);
+    opacity: 1; } }
+@keyframes verticalBarRotate {
+  from {
+    transform: rotateY(80deg);
+    opacity: 0; }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1; } }
+@-webkit-keyframes verticalBarRotate {
+  from {
+    -webkit-transform: rotateY(80deg);
+    opacity: 0; }
+  to {
+    -webkit-transform: rotateY(0deg);
+    opacity: 1; } }
+@keyframes horizontalBarOut {
+  from {
+    transform: translateX(0) scale(1);
+    opacity: 1; }
+  to {
+    transform: translateX(-100%) scale(0.1);
+    opacity: 0; } }
+@-webkit-keyframes horizontalBarOut {
+  from {
+    -webkit-transform: translateX(0) scale(1);
+    opacity: 1; }
+  to {
+    -webkit-transform: translateX(-100%) scale(0.1);
+    opacity: 0; } }
+@-webkit-keyframes jumpIn {
+  0% {
+    -webkit-transform: matrix3d(0.3, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 1, 0, 800, 630, 0, 1);
+    opacity: 0; }
+  25% {
+    -webkit-transform: matrix3d(0.3, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 1, 0, 600, 430, 0, 1);
+    opacity: 0.7; }
+  50% {
+    -webkit-transform: matrix3d(0.3, 0, 0, 0.0002, 0, 0.3, 0, 0, 0, 0, 1, 0, 400, 230, 0, 1);
+    opacity: 0.85; }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    opacity: 1; } }
+@keyframes jumpIn {
+  0% {
+    transform: matrix3d(0.3, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 1, 0, 800, 630, 0, 1);
+    opacity: 0; }
+  25% {
+    transform: matrix3d(0.3, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 1, 0, 600, 430, 0, 1);
+    opacity: 0.7; }
+  50% {
+    transform: matrix3d(0.3, 0, 0, 0.0002, 0, 0.3, 0, 0, 0, 0, 1, 0, 400, 230, 0, 1);
+    opacity: 0.85; }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    opacity: 1; } }
+@keyframes jumpOut {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    opacity: 1; }
+  25% {
+    transform: matrix3d(0.3, 0, 0, 0.0002, 0, 0.3, 0, 0, 0, 0, 1, 0, -400, -230, 0, 1);
+    opacity: 0.75; }
+  50% {
+    transform: matrix3d(0.3, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 1, 0, -600, -430, 0, 1);
+    opacity: 0.5; }
+  100% {
+    transform: matrix3d(0.3, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 1, 0, -800, -630, 0, 1);
+    opacity: 0; } }
+@-webkit-keyframes jumpOut {
+  0% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    opacity: 1; }
+  25% {
+    -webkit-transform: matrix3d(0.3, 0, 0, 0.0002, 0, 0.3, 0, 0, 0, 0, 1, 0, -400, -230, 0, 1);
+    opacity: 0.75; }
+  50% {
+    -webkit-transform: matrix3d(0.3, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 1, 0, -600, -430, 0, 1);
+    opacity: 0.5; }
+  100% {
+    -webkit-transform: matrix3d(0.3, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 1, 0, -800, -630, 0, 1);
+    opacity: 0; } }
+@keyframes rot {
+  from {
+    transform: rotateX(0deg);
+    opacity: 1; }
+  to {
+    transform: rotateX(80deg);
+    opacity: 0; } }
+@keyframes rotFromBack {
+  from {
+    transform: rotateX(80deg);
+    opacity: 0; }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1; } }
+@keyframes spinX {
+  from {
+    transform: translateX(0);
+    opacity: 1; }
+  to {
+    transform: translateX(100%);
+    opacity: 0; } }
+@keyframes spinOutFromX {
+  from {
+    transform: translateX(-100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+@keyframes spinOutFromY {
+  from {
+    transform: translateY(-100%) scale(0.1);
+    opacity: 0; }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1; } }
+@keyframes spinY {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(-100%);
+    opacity: 0; } }
+@keyframes spinYBar {
+  from {
+    transform: translateY(100%) scale(0.1);
+    opacity: 0; }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1; } }
+@keyframes tranY {
+  from {
+    transform: scale(1);
+    border-radius: 0;
+    opacity: 1; }
+  to {
+    transform: scale(0);
+    border-radius: 140px;
+    opacity: 0; } }
+@keyframes moveRightFromX {
+  from {
+    transform: translateX(100%) scale(0.5); }
+  to {
+    transform: translateX(0) scale(1); } }
+@-webkit-keyframes moveRightFromX {
+  from {
+    -webkit-transform: translateX(100%) scale(0.5); }
+  to {
+    -webkit-transform: translateX(0) scale(1); } }
+@keyframes moveLeftFromX {
+  from {
+    transform: translateX(-100%) scale(0.5); }
+  to {
+    transform: translateX(0) scale(1); } }
+@-webkit-keyframes moveLeftFromX {
+  from {
+    -webkit-transform: translateX(-100%) scale(0.5); }
+  to {
+    -webkit-transform: translateX(0) scale(1); } }
+@keyframes moveY {
+  from {
+    transform: translateY(150px) scale(0.5); }
+  to {
+    transform: translateY(0) scale(1); } }
+@-webkit-keyframes moveY {
+  from {
+    -webkit-transform: translateY(150px) scale(0.5); }
+  to {
+    -webkit-transform: translateY(0) scale(1); } }
+@keyframes door {
+  from {
+    transform: scale(1);
+    opacity: 1; }
+  to {
+    transform: scale(0);
+    opacity: 0; } }
+@keyframes circle-color {
+  from {
+    background: #000;
+    color: #fff; }
+  to {
+    background: #888;
+    color: #000; } }
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+@keyframes dis-app {
+  from {
+    opacity: 0.25;
+    transform: scale(0.1); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+@-moz-keyframes dis-app {
+  from {
+    opacity: 0.25;
+    transform: scale(0.1); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+@-webkit-keyframes dis-app {
+  from {
+    opacity: 0.25;
+    -webkit-transform: scale(0.1); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1); } }
+@keyframes app {
+  from {
+    opacity: 0.1;
+    transform: scale(1); }
+  to {
+    opacity: 1;
+    transform: scale(0); } }
+@-webkit-keyframes app {
+  from {
+    -webkit-opacity: 0.75;
+    -webkit-transform: scale(1); }
+  to {
+    -webkit-opacity: 1;
+    -webkit-transform: scale(0); } }
+@keyframes infinite-spinning {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(720deg); } }
+@-webkit-keyframes infinite-spinning {
+  from {
+    -webkit-transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(720deg); } }
+* {
+  padding: 0;
+  margin: 0; }
+
+div#Company-Space {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: auto auto;
+  display: block;
+  text-shadow: 0 1px 1px #888;
+  -moz-box-shadow: 1px 1px 5px 0 #888;
+  -webkit-box-shadow: 1px 1px 5px 0 #888;
+  /*	*/
+  box-shadow: 1px 1px 5px 0 #888;
+  /******style company*/ }
+  div#Company-Space img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    margin: 0;
+    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    perspective: 1700px; }
+  div#Company-Space div.mainSwitch {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+    top: 0;
+    margin: 0;
+    perspective: 1700px;
+    z-index: 3;
+    background: #ddd; }
+  div#Company-Space .custom {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 700px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30pt;
+    font-family: "Vollkorn";
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    left: 0;
+    text-shadow: 0 1px 1px #888;
+    animation: moveLeftFromX 2s ease;
+    -webkit-animation: moveLeftFromX 2s ease;
+    box-sizing: border-box; }
+    div#Company-Space .custom div.information-box {
+      position: relative;
+      top: 0;
+      width: 60%;
+      height: 300px;
+      display: block;
+      margin: 200px auto;
+      text-align: center; }
+      div#Company-Space .custom div.information-box div.story, div#Company-Space .custom div.information-box div.storyBlack {
+        perspective: 1700px;
+        width: 90%;
+        height: auto;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 35pt;
+        font-family: "Roboto Condensed";
+        text-transform: normal;
+        text-align: center;
+        color: #fff;
+        font-style: italic;
+        margin: auto auto;
+        animation: moveLeftFromX 2s ease; }
+      div#Company-Space .custom div.information-box div.storyBlack {
+        color: #000; }
+      div#Company-Space .custom div.information-box span.slogan, div#Company-Space .custom div.information-box span.slogan.green, div#Company-Space .custom div.information-box .black {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 13pt;
+        font-family: "Roboto Condensed";
+        text-transform: normal;
+        text-align: center;
+        color: #fff;
+        margin: auto auto;
+        width: 100%;
+        line-height: 60px;
+        display: block;
+        text-shadow: 0 1px 1px #888;
+        animation: moveLeftFromX 2s ease; }
+      div#Company-Space .custom div.information-box span.slogan.green {
+        color: #3d483d; }
+      div#Company-Space .custom div.information-box span.slogan.black {
+        color: #fff; }
+      div#Company-Space .custom div.information-box a {
+        width: 120px;
+        height: 40px;
+        padding: 5px 10px;
+        margin: auto auto;
+        line-height: 40px;
+        display: block;
+        border-radius: 28px 28px;
+        background: linear-gradient(#707070, #bebebe);
+        -moz-box-shadow: 0 1px 1px 0 #888;
+        -webkit-box-shadow: 0 1px 1px 0 #888;
+        /*	*/
+        box-shadow: 0 1px 1px 0 #888;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 13pt;
+        font-family: "Roboto Condensed";
+        text-transform: normal;
+        text-align: center;
+        color: #fff;
+        animation: moveLeftFromX 1s ease;
+        -webkit-transform: moveLeftFromX 1s ease; }
+        div#Company-Space .custom div.information-box a:hover {
+          background: linear-gradient(rgba(43, 216, 255, 0.5), rgba(8, 38, 158, 0.5)); }
+
+div.business-social {
+  height: 150px;
+  width: 100%;
+  opacity: 0.2;
+  background: linear-gradient(to bottom, #fff, #fff); }
+
+div.site-logo {
+  height: 142px;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px inset #2680FF; }
+  div.site-logo div.logo {
+    margin: auto auto;
+    width: 40%;
+    height: 132px;
+    position: absolute; }
+    div.site-logo div.logo img {
+      margin: auto auto;
+      max-width: 145px;
+      height: 132px; }
+  div.site-logo div.site-header {
+    position: absolute;
+    right: 10%;
+    width: 60%;
+    height: 90px;
+    /*         background:#4f4f4f;
+             background:#FF3B00;*/
+    /*         background:#2680FF;*/ }
+    div.site-logo div.site-header ul {
+      position: absolute;
+      list-style: none;
+      width: 100%;
+      margin: 0 0;
+      right: 0;
+      top: 0;
+      padding: 0;
+      height: 60px; }
+      div.site-logo div.site-header ul li {
+        float: left;
+        position: relative;
+        line-height: 140px;
+        position: relative;
+        opacity: 1;
+        width: 20%;
+        transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear; }
+        div.site-logo div.site-header ul li > ul {
+          position: absolute;
+          padding: 15px 15px;
+          top: 90px;
+          left: 0;
+          transition: all 0.5s linear;
+          -webkit-transition: all 0.5s linear;
+          -moz-transition: all 0.5s linear;
+          -moz-box-shadow: 1px 1px 5px 0 #888;
+          -webkit-box-shadow: 1px 1px 5px 0 #888;
+          /*	*/
+          box-shadow: 1px 1px 5px 0 #888;
+          display: none;
+          height: auto;
+          width: 200%;
+          background: #FF3B00;
+          background: linear-gradient(-145deg, #FF3B00 0%, #F5AD98 100%);
+          background: linear-gradient(-45deg, #2680FF 0%, #61A1FA 100%);
+          background: linear-gradient(-90deg, #20232a 0%, #20232a 100%) !important;
+          color: #fff;
+          box-sizing: border-box; }
+          div.site-logo div.site-header ul li > ul li {
+            width: 40%;
+            margin: auto 5%;
+            text-align: center; }
+          div.site-logo div.site-header ul li > ul a {
+            width: 100%;
+            line-height: 30px;
+            display: block;
+            transition: all 0.5s linear;
+            -webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 8pt;
+            font-family: "Open Sans";
+            text-transform: uppercase;
+            text-align: left;
+            color: #fff; }
+            div.site-logo div.site-header ul li > ul a:hover {
+              line-height: 30px;
+              padding: 0;
+              margin: 0; }
+        div.site-logo div.site-header ul li:hover, div.site-logo div.site-header ul li > a:hover, div.site-logo div.site-header ul li a.current, div.site-logo div.site-header ul li div#current-location.current {
+          text-decoration: underline;
+          text-decoration-color: #F16121; }
+        div.site-logo div.site-header ul li > a {
+          text-decoration: none;
+          font-weight: normal;
+          font-size: 9pt;
+          font-family: "Open Sans";
+          text-transform: uppercase;
+          text-align: center;
+          color: #000;
+          text-shadow: 0 1px 1px #888;
+          display: block;
+          cursor: pointer;
+          vertical-align: middle;
+          width: 100%;
+          box-sizing: border-box; }
+      div.site-logo div.site-header ul li:first-child a {
+        border-left: none; }
+      div.site-logo div.site-header ul li:hover > ul {
+        display: block;
+        z-index: 300;
+        animation: moveX .5s ease; }
+
+div#content {
+  font-family: "Open Sans";
+  background: #e3e3e3;
+  background: #fff;
+  display: block;
+  /***
+      box float top
+  ***/ }
+  div#content div.service {
+    width: 100%;
+    display: block;
+    box-sizng: border-box;
+    margin: auto auto;
+    position: relative;
+    background: #fff !important;
+    overflow: hidden; }
+    div#content div.service div.center-header {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 22pt;
+      font-family: "Arimo";
+      text-transform: uppercase;
+      text-align: center;
+      color: #000;
+      display: block;
+      margin: auto auto;
+      width: 80%;
+      padding: 20px 0;
+      height: 60px;
+      line-height: 60px;
+      text-shadow: 0 1px 1px #888; }
+    div#content div.service div.float-container {
+      width: 90% !important;
+      padding: 50px 0;
+      -moz-box-shadow: 0 1px 5px 0 #000;
+      -webkit-box-shadow: 0 1px 5px 0 #000;
+      /*	*/
+      box-shadow: 0 1px 5px 0 #000;
+      background: #fff !important; }
+      div#content div.service div.float-container div.float-box, div#content div.service div.float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.service div.float-container div.one-column-box {
+        width: 25% !important; }
+        div#content div.service div.float-container div.float-box div.float-button, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-button, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-button {
+          border-radius: 5px 5px;
+          width: 140px;
+          height: 30px;
+          color: #fff !important;
+          line-height: 30px;
+          background: linear-gradient(45deg, #ff3b00 0%, #f85006 50%, #ff3b00 100%) !important;
+          background: linear-gradient(-90deg, #20232a 0%, #20232a 100%) !important;
+          background: linear-gradient(-90deg, #394251 0%, #394251 100%) !important;
+          display: block;
+          margin: 10px auto;
+          padding: 3px 3px;
+          -moz-box-shadow: 0 1px 1px 0 #888;
+          -webkit-box-shadow: 0 1px 1px 0 #888;
+          /*	*/
+          box-shadow: 0 1px 1px 0 #888;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 8pt;
+          font-family: "Arimo";
+          text-transform: uppercase;
+          text-align: center;
+          color: #000; }
+        div#content div.service div.float-container div.float-box div.icon-header, div#content div.service div.float-container div.box-icon-top div.one-column-box div.icon-header, div#content div.box-icon-top div.service div.float-container div.one-column-box div.icon-header, div#content div.service div.float-container div.float-box div.icon-header-team, div#content div.service div.float-container div.box-icon-top div.one-column-box div.icon-header-team, div#content div.box-icon-top div.service div.float-container div.one-column-box div.icon-header-team,
+        div#content div.service div.float-container div.float-box div.icon-header-com,
+        div#content div.service div.float-container div.box-icon-top div.one-column-box div.icon-header-com,
+        div#content div.box-icon-top div.service div.float-container div.one-column-box div.icon-header-com,
+        div#content div.service div.float-container div.float-box div.icon-header-network,
+        div#content div.service div.float-container div.box-icon-top div.one-column-box div.icon-header-network,
+        div#content div.box-icon-top div.service div.float-container div.one-column-box div.icon-header-network {
+          display: block;
+          margin: auto auto;
+          width: 64px;
+          height: 64px;
+          background: url("images/icon64/graph.png") no-repeat 38% 0;
+          transition: all 1s linear;
+          -webkit-transition: all 1s linear;
+          -moz-transition: all 1s linear; }
+        div#content div.service div.float-container div.float-box div.icon-header-team, div#content div.service div.float-container div.box-icon-top div.one-column-box div.icon-header-team, div#content div.box-icon-top div.service div.float-container div.one-column-box div.icon-header-team {
+          background: url("images/icon64/evropa2.png") no-repeat 38% 0; }
+        div#content div.service div.float-container div.float-box div.icon-header-com, div#content div.service div.float-container div.box-icon-top div.one-column-box div.icon-header-com, div#content div.box-icon-top div.service div.float-container div.one-column-box div.icon-header-com {
+          background: url("images/icon64/sms.png") no-repeat 38% 0; }
+        div#content div.service div.float-container div.float-box div.icon-header-network, div#content div.service div.float-container div.box-icon-top div.one-column-box div.icon-header-network, div#content div.box-icon-top div.service div.float-container div.one-column-box div.icon-header-network {
+          background: url("images/icon64/camera.png") no-repeat 38% 0; }
+        div#content div.service div.float-container div.float-box div.float-header, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header, div#content div.service div.float-container div.float-box div.float-header.green, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.green, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.green,
+        div#content div.service div.float-container div.float-box div.float-header.organge,
+        div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.organge,
+        div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.organge,
+        div#content div.service div.float-container div.float-box div.float-header.black,
+        div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.black,
+        div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.black,
+        div#content div.service div.float-container div.float-box div.float-header.gray,
+        div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.gray,
+        div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.gray {
+          color: #000 !important;
+          font-size: 12pt !important;
+          text-align: center !important; }
+          div#content div.service div.float-container div.float-box div.float-header:after, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header:after, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header:after, div#content div.service div.float-container div.float-box div.float-header.green:after, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.green:after, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.green:after,
+          div#content div.service div.float-container div.float-box div.float-header.organge:after,
+          div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.organge:after,
+          div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.organge:after,
+          div#content div.service div.float-container div.float-box div.float-header.black:after,
+          div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.black:after,
+          div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.black:after,
+          div#content div.service div.float-container div.float-box div.float-header.gray:after,
+          div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.gray:after,
+          div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.gray:after {
+            content: "";
+            display: block;
+            width: 80%;
+            height: 1px;
+            background: #2680FF;
+            margin: 3px auto; }
+        div#content div.service div.float-container div.float-box div.float-header.red:after, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.red:after, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.red:after {
+          background: red; }
+        div#content div.service div.float-container div.float-box div.float-header.purple:after, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.purple:after, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.purple:after {
+          background: #b55cea; }
+        div#content div.service div.float-container div.float-box div.float-header.orange:after, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header.orange:after, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header.orange:after {
+          background: orange; }
+        div#content div.service div.float-container div.float-box div.float-content, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-content {
+          color: #000 !important;
+          font-size: 9pt !important;
+          width: 80% !important; }
+  div#content div.partner {
+    background: linear-gradient(-45deg, #2b63f1 0%, #33abff 50%, #2b63f1 100%) !important; }
+    div#content div.partner div.left-header {
+      text-align: center !important;
+      width: 100% !important;
+      height: 60px !important;
+      line-height: 60px !important; }
+    div#content div.partner div.float-container, div#content div.partner .float-container {
+      margin: 0;
+      width: 90%  !important; }
+      div#content div.partner div.float-container div.show-case-desc, div#content div.partner div.float-container div.show-case-img, div#content div.partner .float-container div.show-case-desc, div#content div.partner .float-container div.show-case-img {
+        float: left;
+        height: 650px;
+        width: 50%; }
+        div#content div.partner div.float-container div.show-case-desc div, div#content div.partner div.float-container div.show-case-img div, div#content div.partner .float-container div.show-case-desc div, div#content div.partner .float-container div.show-case-img div {
+          margin: 80px 0;
+          text-decoration: none;
+          font-weight: normal;
+          font-size: 38pt;
+          font-family: "Arimo";
+          text-transform: normal;
+          text-align: left;
+          color: #fff;
+          text-align: left;
+          width: 100%;
+          height: 30px;
+          line-height: 40px;
+          color: #fff; }
+        div#content div.partner div.float-container div.show-case-desc ul.show-case-list, div#content div.partner div.float-container div.show-case-img ul.show-case-list, div#content div.partner .float-container div.show-case-desc ul.show-case-list, div#content div.partner .float-container div.show-case-img ul.show-case-list {
+          margin: 30px 10px; }
+          div#content div.partner div.float-container div.show-case-desc ul.show-case-list li, div#content div.partner div.float-container div.show-case-img ul.show-case-list li, div#content div.partner .float-container div.show-case-desc ul.show-case-list li, div#content div.partner .float-container div.show-case-img ul.show-case-list li {
+            line-height: 50px;
+            color: #fff;
+            display: list-item !important;
+            width: 100%;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 18pt;
+            font-family: "Open Sans";
+            text-transform: normal;
+            text-align: left;
+            color: #fff; }
+      div#content div.partner div.float-container div.show-case-img, div#content div.partner .float-container div.show-case-img {
+        perspective: 1700px; }
+        div#content div.partner div.float-container div.show-case-img img, div#content div.partner .float-container div.show-case-img img {
+          transform: rotateX(70deg) rotateY(0deg) rotateZ(-45deg) translateY(-130px) translateX(30px) scale(0.9);
+          perspective: 1700px;
+          width: 100%;
+          height: 650px;
+          -moz-box-shadow: -10px -20px 30px 0 #000;
+          -webkit-box-shadow: -10px -20px 30px 0 #000;
+          /*	*/
+          box-shadow: -10px -20px 30px 0 #000; }
+  div#content div.portfolio, div#content div.portfolio div.float-container, div#content div.portfolio .float-container, div#content div.service div.float-container, div#content div.service .float-container, div#content div.partner div.float-container, div#content div.partner .float-container, div#content div.express div.float-container, div#content div.express .float-container, div#content div.service, div#content div.partner, div#content div.express {
+    width: 100%;
+    display: block;
+    box-sizng: border-box;
+    margin: auto auto;
+    position: relative;
+    background: linear-gradient(90deg, #000 0%, #303030 100%);
+    overflow: hidden; }
+    div#content div.portfolio div.left-header, div#content div.service .float-container div.left-header, div#content div.partner .float-container div.left-header, div#content div.express .float-container div.left-header, div#content div.service div.left-header, div#content div.partner div.left-header, div#content div.express div.left-header {
+      text-decoration: none;
+      font-weight: 200;
+      font-size: 25pt;
+      font-family: "Arimo";
+      text-transform: normal;
+      text-align: left;
+      color: #fff;
+      display: block;
+      margin: auto auto;
+      width: 80%;
+      height: 60px;
+      line-height: 60px; }
+    div#content div.portfolio div.float-container, div#content div.service .float-container div.float-container, div#content div.partner .float-container div.float-container, div#content div.express .float-container div.float-container, div#content div.portfolio .float-container, div#content div.service .float-container .float-container, div#content div.partner .float-container .float-container, div#content div.express .float-container .float-container, div#content div.service div.float-container, div#content div.service .float-container, div#content div.partner div.float-container, div#content div.partner .float-container, div#content div.express div.float-container, div#content div.express .float-container {
+      width: 81%;
+      margin: 30px auto;
+      background: none; }
+      div#content div.portfolio div.float-container div.float-box, div#content div.service .float-container div.float-container div.float-box, div#content div.partner .float-container div.float-container div.float-box, div#content div.express .float-container div.float-container div.float-box, div#content div.portfolio div.float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.portfolio div.float-container div.one-column-box, div#content div.service .float-container div.float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.service .float-container div.float-container div.one-column-box, div#content div.partner .float-container div.float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.partner .float-container div.float-container div.one-column-box, div#content div.express .float-container div.float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.express .float-container div.float-container div.one-column-box, div#content div.portfolio .float-container div.float-box, div#content div.service .float-container .float-container div.float-box, div#content div.partner .float-container .float-container div.float-box, div#content div.express .float-container .float-container div.float-box, div#content div.portfolio .float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.portfolio .float-container div.one-column-box, div#content div.service .float-container .float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.service .float-container .float-container div.one-column-box, div#content div.partner .float-container .float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.partner .float-container .float-container div.one-column-box, div#content div.express .float-container .float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.express .float-container .float-container div.one-column-box, div#content div.service div.float-container div.float-box, div#content div.service div.float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.service div.float-container div.one-column-box, div#content div.service .float-container div.float-box, div#content div.service .float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.service .float-container div.one-column-box, div#content div.partner div.float-container div.float-box, div#content div.partner div.float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.partner div.float-container div.one-column-box, div#content div.partner .float-container div.float-box, div#content div.partner .float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.partner .float-container div.one-column-box, div#content div.express div.float-container div.float-box, div#content div.express div.float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.express div.float-container div.one-column-box, div#content div.express .float-container div.float-box, div#content div.express .float-container div.box-icon-top div.one-column-box, div#content div.box-icon-top div.express .float-container div.one-column-box {
+        float: left;
+        width: 33.33333%;
+        box-sizng: border-box;
+        text-align: center; }
+        div#content div.portfolio div.float-container div.float-box div.float-img img, div#content div.service .float-container div.float-container div.float-box div.float-img img, div#content div.partner .float-container div.float-container div.float-box div.float-img img, div#content div.express .float-container div.float-container div.float-box div.float-img img, div#content div.portfolio div.float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.portfolio div.float-container div.one-column-box div.float-img img, div#content div.service .float-container div.float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.service .float-container div.float-container div.one-column-box div.float-img img, div#content div.partner .float-container div.float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.partner .float-container div.float-container div.one-column-box div.float-img img, div#content div.express .float-container div.float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.express .float-container div.float-container div.one-column-box div.float-img img, div#content div.portfolio .float-container div.float-box div.float-img img, div#content div.service .float-container .float-container div.float-box div.float-img img, div#content div.partner .float-container .float-container div.float-box div.float-img img, div#content div.express .float-container .float-container div.float-box div.float-img img, div#content div.portfolio .float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.portfolio .float-container div.one-column-box div.float-img img, div#content div.service .float-container .float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.service .float-container .float-container div.one-column-box div.float-img img, div#content div.partner .float-container .float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.partner .float-container .float-container div.one-column-box div.float-img img, div#content div.express .float-container .float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.express .float-container .float-container div.one-column-box div.float-img img, div#content div.service div.float-container div.float-box div.float-img img, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-img img, div#content div.service .float-container div.float-box div.float-img img, div#content div.service .float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.service .float-container div.one-column-box div.float-img img, div#content div.partner div.float-container div.float-box div.float-img img, div#content div.partner div.float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.partner div.float-container div.one-column-box div.float-img img, div#content div.partner .float-container div.float-box div.float-img img, div#content div.partner .float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.partner .float-container div.one-column-box div.float-img img, div#content div.express div.float-container div.float-box div.float-img img, div#content div.express div.float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.express div.float-container div.one-column-box div.float-img img, div#content div.express .float-container div.float-box div.float-img img, div#content div.express .float-container div.box-icon-top div.one-column-box div.float-img img, div#content div.box-icon-top div.express .float-container div.one-column-box div.float-img img {
+          width: 94%;
+          height: 280px; }
+        div#content div.portfolio div.float-container div.float-box div.float-header, div#content div.service .float-container div.float-container div.float-box div.float-header, div#content div.partner .float-container div.float-container div.float-box div.float-header, div#content div.express .float-container div.float-container div.float-box div.float-header, div#content div.portfolio div.float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.portfolio div.float-container div.one-column-box div.float-header, div#content div.service .float-container div.float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.service .float-container div.float-container div.one-column-box div.float-header, div#content div.partner .float-container div.float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.partner .float-container div.float-container div.one-column-box div.float-header, div#content div.express .float-container div.float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.express .float-container div.float-container div.one-column-box div.float-header, div#content div.portfolio div.float-container div.float-box div.float-content, div#content div.service .float-container div.float-container div.float-box div.float-content, div#content div.partner .float-container div.float-container div.float-box div.float-content, div#content div.express .float-container div.float-container div.float-box div.float-content, div#content div.portfolio div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.portfolio div.float-container div.one-column-box div.float-content, div#content div.service .float-container div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service .float-container div.float-container div.one-column-box div.float-content, div#content div.partner .float-container div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.partner .float-container div.float-container div.one-column-box div.float-content, div#content div.express .float-container div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.express .float-container div.float-container div.one-column-box div.float-content, div#content div.portfolio .float-container div.float-box div.float-header, div#content div.service .float-container .float-container div.float-box div.float-header, div#content div.partner .float-container .float-container div.float-box div.float-header, div#content div.express .float-container .float-container div.float-box div.float-header, div#content div.portfolio .float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.portfolio .float-container div.one-column-box div.float-header, div#content div.service .float-container .float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.service .float-container .float-container div.one-column-box div.float-header, div#content div.partner .float-container .float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.partner .float-container .float-container div.one-column-box div.float-header, div#content div.express .float-container .float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.express .float-container .float-container div.one-column-box div.float-header, div#content div.portfolio .float-container div.float-box div.float-content, div#content div.service .float-container .float-container div.float-box div.float-content, div#content div.partner .float-container .float-container div.float-box div.float-content, div#content div.express .float-container .float-container div.float-box div.float-content, div#content div.portfolio .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.portfolio .float-container div.one-column-box div.float-content, div#content div.service .float-container .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service .float-container .float-container div.one-column-box div.float-content, div#content div.partner .float-container .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.partner .float-container .float-container div.one-column-box div.float-content, div#content div.express .float-container .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.express .float-container .float-container div.one-column-box div.float-content, div#content div.service div.float-container div.float-box div.float-header, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-header, div#content div.service div.float-container div.float-box div.float-content, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-content, div#content div.service .float-container div.float-box div.float-header, div#content div.service .float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.service .float-container div.one-column-box div.float-header, div#content div.service .float-container div.float-box div.float-content, div#content div.service .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service .float-container div.one-column-box div.float-content, div#content div.partner div.float-container div.float-box div.float-header, div#content div.partner div.float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.partner div.float-container div.one-column-box div.float-header, div#content div.partner div.float-container div.float-box div.float-content, div#content div.partner div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.partner div.float-container div.one-column-box div.float-content, div#content div.partner .float-container div.float-box div.float-header, div#content div.partner .float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.partner .float-container div.one-column-box div.float-header, div#content div.partner .float-container div.float-box div.float-content, div#content div.partner .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.partner .float-container div.one-column-box div.float-content, div#content div.express div.float-container div.float-box div.float-header, div#content div.express div.float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.express div.float-container div.one-column-box div.float-header, div#content div.express div.float-container div.float-box div.float-content, div#content div.express div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.express div.float-container div.one-column-box div.float-content, div#content div.express .float-container div.float-box div.float-header, div#content div.express .float-container div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div.express .float-container div.one-column-box div.float-header, div#content div.express .float-container div.float-box div.float-content, div#content div.express .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.express .float-container div.one-column-box div.float-content {
+          width: 94%;
+          margin: auto auto;
+          padding: 5px 0;
+          text-shadow: 0 1px 1px #888;
+          text-decoration: none;
+          font-weight: 200;
+          font-size: 16pt;
+          font-family: "Arimo";
+          text-transform: normal;
+          text-align: left;
+          color: #fff; }
+        div#content div.portfolio div.float-container div.float-box div.float-content, div#content div.service .float-container div.float-container div.float-box div.float-content, div#content div.partner .float-container div.float-container div.float-box div.float-content, div#content div.express .float-container div.float-container div.float-box div.float-content, div#content div.portfolio div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.portfolio div.float-container div.one-column-box div.float-content, div#content div.service .float-container div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service .float-container div.float-container div.one-column-box div.float-content, div#content div.partner .float-container div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.partner .float-container div.float-container div.one-column-box div.float-content, div#content div.express .float-container div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.express .float-container div.float-container div.one-column-box div.float-content, div#content div.portfolio .float-container div.float-box div.float-content, div#content div.service .float-container .float-container div.float-box div.float-content, div#content div.partner .float-container .float-container div.float-box div.float-content, div#content div.express .float-container .float-container div.float-box div.float-content, div#content div.portfolio .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.portfolio .float-container div.one-column-box div.float-content, div#content div.service .float-container .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service .float-container .float-container div.one-column-box div.float-content, div#content div.partner .float-container .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.partner .float-container .float-container div.one-column-box div.float-content, div#content div.express .float-container .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.express .float-container .float-container div.one-column-box div.float-content, div#content div.service div.float-container div.float-box div.float-content, div#content div.service div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service div.float-container div.one-column-box div.float-content, div#content div.service .float-container div.float-box div.float-content, div#content div.service .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.service .float-container div.one-column-box div.float-content, div#content div.partner div.float-container div.float-box div.float-content, div#content div.partner div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.partner div.float-container div.one-column-box div.float-content, div#content div.partner .float-container div.float-box div.float-content, div#content div.partner .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.partner .float-container div.one-column-box div.float-content, div#content div.express div.float-container div.float-box div.float-content, div#content div.express div.float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.express div.float-container div.one-column-box div.float-content, div#content div.express .float-container div.float-box div.float-content, div#content div.express .float-container div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div.express .float-container div.one-column-box div.float-content {
+          margin: auto auto;
+          font-size: 10pt;
+          width: 94%;
+          text-align: left; }
+  div#content div.express {
+    background: linear-gradient(rgba(12, 193, 213, 0.5), rgba(12, 193, 213, 0.5)), url("images/2.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: 600px; }
+  div#content div.box-icon-top {
+    width: 100%;
+    margin: auto auto;
+    position: relative;
+    display: block;
+    box-sizng: border-box;
+    background: #fff;
+    padding: 20px 0;
+    -moz-box-shadow: -2px 2px 4px 0 #888;
+    -webkit-box-shadow: -2px 2px 4px 0 #888;
+    /*	*/
+    box-shadow: -2px 2px 4px 0 #888;
+    overflow: hidden; }
+    div#content div.box-icon-top div.float-box, div#content div.box-icon-top div.one-column-box {
+      float: left;
+      width: 33.33333%;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.1s linear;
+      -webkit-transition: all 0.1s linear;
+      -moz-transition: all 0.1s linear; }
+      div#content div.box-icon-top div.float-box img, div#content div.box-icon-top div.one-column-box img {
+        max-width: 33.33333%;
+        height: auto; }
+    div#content div.box-icon-top div.one-column-box {
+      opacity: 1;
+      width: 100%; }
+      div#content div.box-icon-top div.one-column-box .news-item {
+        margin: auto auto;
+        width: 95%;
+        height: 30px;
+        line-height: 30px;
+        text-decoration: none;
+        font-weight: 200;
+        font-size: 10pt;
+        font-family: "Open Sans";
+        text-transform: normal;
+        text-align: left;
+        color: blue;
+        text-decoration: underline;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; }
+      div#content div.box-icon-top div.one-column-box .news-headline {
+        width: 98%;
+        margin: auto auto;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 12pt;
+        font-family: "Open Sans Condensed";
+        text-transform: uppercase;
+        text-align: left;
+        color: #000;
+        height: 45px;
+        line-height: 60px;
+        border-bottom: 2px solid #0881c4; }
+
+.main-container {
+  width: 100%;
+  font-size: 12pt;
+  color: #000;
+  margin: auto auto; }
+  .main-container p {
+    line-height: 1.65em;
+    font-size: 12pt;
+    font-family: Arial, sans-serif; }
+
+div#footer {
+  width: 100%;
+  height: 380px;
+  background: linear-gradient(-90deg, #20232a 0%, #20232a 100%) !important; }
+  div#footer .footer-content {
+    width: 100%;
+    display: block;
+    margin: 0; }
+    div#footer .footer-content div.float-container, div#footer .footer-content .float-container {
+      width: 63%;
+      margin: auto auto;
+      background: none;
+      height: 340px; }
+      div#footer .footer-content div.float-container div.float-box, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box, div#footer .footer-content .float-container div.float-box, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box {
+        float: left;
+        margin: 20px auto;
+        width: 33.33333%;
+        box-sizng: border-box;
+        text-align: center; }
+        div#footer .footer-content div.float-container div.float-box div.float-header, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-header, div#footer .footer-content div.float-container div.float-box div.float-content, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content, div#footer .footer-content .float-container div.float-box div.float-header, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-header, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-header, div#footer .footer-content .float-container div.float-box div.float-content, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content {
+          width: 94%;
+          margin: auto auto;
+          padding: 5px 0;
+          text-shadow: 0 1px 1px #888;
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 20pt;
+          font-family: "Vollkorn";
+          text-transform: normal;
+          text-align: left;
+          color: #fff;
+          font-family: 'Roboto Condensed', sans-serif; }
+        div#footer .footer-content div.float-container div.float-box div.float-content, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content, div#footer .footer-content .float-container div.float-box div.float-content, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content {
+          margin: 20px auto;
+          font-size: 10pt;
+          width: 94%;
+          text-align: left; }
+          div#footer .footer-content div.float-container div.float-box div.float-content span, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content span, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content span, div#footer .footer-content .float-container div.float-box div.float-content span, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content span, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content span {
+            width: 100%;
+            display: block;
+            line-height: 30px; }
+          div#footer .footer-content div.float-container div.float-box div.float-content div.social-connect, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content div.social-connect, div#footer .footer-content div.float-container div.float-box div.float-content div.social-connect-twitter
+          , div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-twitter
+          , div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content div.social-connect-twitter
+          , div#footer .footer-content div.float-container div.float-box div.float-content div.social-connect-linkedin
+          , div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-linkedin
+          , div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content div.social-connect-linkedin
+          , div#footer .footer-content div.float-container div.float-box div.float-content div.social-connect-fb, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-fb, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content div.social-connect-fb, div#footer .footer-content .float-container div.float-box div.float-content div.social-connect, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content div.social-connect, div#footer .footer-content .float-container div.float-box div.float-content div.social-connect-twitter
+          , div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-twitter
+          , div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content div.social-connect-twitter
+          , div#footer .footer-content .float-container div.float-box div.float-content div.social-connect-linkedin
+          , div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-linkedin
+          , div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content div.social-connect-linkedin
+          , div#footer .footer-content .float-container div.float-box div.float-content div.social-connect-fb, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-fb, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content div.social-connect-fb {
+            float: left;
+            margin: 0;
+            width: 64px;
+            height: 64px;
+            background: url("images/icon64/youtube.png") no-repeat 0% 0;
+            transition: all 1s linear;
+            -webkit-transition: all 1s linear;
+            -moz-transition: all 1s linear; }
+          div#footer .footer-content div.float-container div.float-box div.float-content div.social-connect-fb, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-fb, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content div.social-connect-fb, div#footer .footer-content .float-container div.float-box div.float-content div.social-connect-fb, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-fb, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content div.social-connect-fb {
+            background: url("images/icon64/fb.png") no-repeat 0% 0; }
+          div#footer .footer-content div.float-container div.float-box div.float-content div.social-connect-twitter, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-twitter, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content div.social-connect-twitter, div#footer .footer-content .float-container div.float-box div.float-content div.social-connect-twitter, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-twitter, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content div.social-connect-twitter {
+            background: url("images/icon64/twitter.png") no-repeat 0% 0; }
+          div#footer .footer-content div.float-container div.float-box div.float-content div.social-connect-linkedin, div#footer .footer-content div.float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-linkedin, div#content div.box-icon-top div#footer .footer-content div.float-container div.one-column-box div.float-content div.social-connect-linkedin, div#footer .footer-content .float-container div.float-box div.float-content div.social-connect-linkedin, div#footer .footer-content .float-container div#content div.box-icon-top div.one-column-box div.float-content div.social-connect-linkedin, div#content div.box-icon-top div#footer .footer-content .float-container div.one-column-box div.float-content div.social-connect-linkedin {
+            background: url("images/icon64/linkedin.png") no-repeat 0% 0; }
+  div#footer div.hoz-box {
+    width: 100%;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin: auto auto;
+    -moz-box-shadow: 0 -1px 1px 0 #52585f;
+    -webkit-box-shadow: 0 -1px 1px 0 #52585f;
+    /*	*/
+    box-shadow: 0 -1px 1px 0 #52585f;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 10pt;
+    font-family: "Vollkorn";
+    text-transform: capitalize;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
